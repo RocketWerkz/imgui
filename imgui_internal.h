@@ -1856,7 +1856,7 @@ struct ImGuiOldColumns
 // [SECTION] Box-select support
 //-----------------------------------------------------------------------------
 
-struct ImGuiBoxSelectState
+struct MS_STRUCT ImGuiBoxSelectState
 {
     // Active box-selection data (persistent, 1 active at a time)
     ImGuiID                 ID;
@@ -1985,7 +1985,7 @@ enum ImGuiDockNodeState
 };
 
 // sizeof() 156~192
-struct IMGUI_API ImGuiDockNode
+struct MS_STRUCT IMGUI_API ImGuiDockNode
 {
     ImGuiID                 ID;
     ImGuiDockNodeFlags      SharedFlags;                // (Write) Flags shared by all nodes of a same dockspace hierarchy (inherited from the root node)
@@ -2282,7 +2282,7 @@ struct ImGuiMetricsConfig
     bool        ShowFontPreview = true;
 };
 
-struct ImGuiStackLevelInfo
+struct MS_STRUCT ImGuiStackLevelInfo
 {
     ImGuiID                 ID;
     ImS8                    QueryFrameCount;            // >= 1: Query in progress
@@ -2329,7 +2329,7 @@ struct ImGuiContextHook
 // [SECTION] ImGuiContext (main Dear ImGui context)
 //-----------------------------------------------------------------------------
 
-struct ImGuiContext
+struct MS_STRUCT ImGuiContext
 {
     bool                    Initialized;
     ImGuiIO                 IO;

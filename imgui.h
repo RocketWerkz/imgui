@@ -148,6 +148,13 @@ Index of this file:
 #pragma GCC diagnostic ignored "-Wclass-memaccess"                  // [__GNUC__ >= 8] warning: 'memset/memcpy' clearing/writing an object of type 'xxxx' with no trivial copy-assignment; use assignment or value-initialization instead
 #endif
 
+// Attribute which can be added to select structs to force clang/gcc to build them with the same bitfield packing as msvc to ensure field offset consistency
+#if defined(__clang__) || defined(__GNUC__)
+#define MS_STRUCT __attribute__((ms_struct))
+#else
+#define MS_STRUCT
+#endif
+
 //-----------------------------------------------------------------------------
 // [SECTION] Forward declarations and basic types
 //-----------------------------------------------------------------------------
